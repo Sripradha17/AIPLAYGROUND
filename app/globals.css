@@ -110,3 +110,53 @@ input[type="range"].slider::-moz-range-thumb:hover {
   box-shadow: 0 0 20px rgba(255, 107, 53, 0.8);
   transform: scale(1.1);
 }
+
+/* ============================================
+   RESPONSIVE UTILITIES
+   ============================================ */
+
+/* Smooth scrolling on all devices */
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Responsive container - works with Tailwind */
+@layer components {
+  .responsive-container {
+    @apply w-full px-4 mx-auto;
+  }
+  
+  @media (min-width: 640px) {
+    .responsive-container {
+      @apply px-6;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .responsive-container {
+      @apply px-8 max-w-7xl;
+    }
+  }
+}
+
+/* Touch-friendly buttons on mobile */
+@media (max-width: 767px) {
+  button, a[role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Prevent zoom on input focus (iOS) */
+input, textarea, select {
+  font-size: 16px;
+}
+
+/* Safe area for notched devices */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
