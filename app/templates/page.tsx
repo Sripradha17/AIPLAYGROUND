@@ -423,6 +423,15 @@ export default function TemplatesPage() {
             <Link href="/templates" className="text-forge-orange font-semibold">
               Templates
             </Link>
+            <Link href="/calculator" className="text-gray-400 hover:text-white transition-colors">
+              Calculator
+            </Link>
+            <Link href="/tools" className="text-gray-400 hover:text-white transition-colors">
+              Tools
+            </Link>
+            <Link href="/library" className="text-gray-400 hover:text-white transition-colors">
+              Library
+            </Link>
           </nav>
         </div>
       </header>

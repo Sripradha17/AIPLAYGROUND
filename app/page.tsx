@@ -2,10 +2,16 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import ThemeToggle from '@/app/components/ThemeToggle'
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-dark-bg via-dark-card to-dark-bg">
+      {/* Theme Toggle */}
+      <div className="fixed top-4 right-4 z-50">
+        <ThemeToggle />
+      </div>
+      
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
@@ -96,7 +102,7 @@ export default function Home() {
           </div>
 
           {/* Additional Features */}
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
             <FeatureCard
               icon="📚"
               title="Interactive Diagrams"
@@ -117,6 +123,31 @@ export default function Home() {
               description="Estimate API costs across models and optimize your token usage"
               delay={1.8}
               link="/calculator"
+            />
+          </div>
+
+          {/* Utility Tools */}
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <FeatureCard
+              icon="🛠️"
+              title="Developer Tools"
+              description="Token counter, prompt comparison, batch testing utilities"
+              delay={2.0}
+              link="/tools"
+            />
+            <FeatureCard
+              icon="💾"
+              title="Prompt Library"
+              description="Save, organize, and reuse your best prompts with tags and search"
+              delay={2.2}
+              link="/library"
+            />
+            <FeatureCard
+              icon="🎭"
+              title="AI Personas"
+              description="11 pre-built personas from Expert Coder to Creative Writer"
+              delay={2.4}
+              link="/playground"
             />
           </div>
         </motion.div>
