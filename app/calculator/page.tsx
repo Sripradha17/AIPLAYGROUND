@@ -38,6 +38,12 @@ export default function CalculatorPage() {
             <Link href="/calculator" className="text-forge-orange font-semibold">
               Calculator
             </Link>
+            <Link href="/tools" className="text-gray-400 hover:text-white transition-colors">
+              Tools
+            </Link>
+            <Link href="/library" className="text-gray-400 hover:text-white transition-colors">
+              Library
+            </Link>
           </nav>
         </div>
       </header>
